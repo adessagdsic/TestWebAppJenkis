@@ -37,8 +37,6 @@ public class MachineLearningServiceTest {
         assertThat(ml, instanceOf(MachineLearningService.class));
 
         //assert true
-        assertThat(ml.suma(2, 2), is(4));
-
-        assertThat(ml.suma(3, 3), is(6));              
+        assertThat(ml.suma(2, 2), is(4));            
     }
 }
