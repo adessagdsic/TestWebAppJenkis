@@ -39,5 +39,6 @@ public class MachineLearningServiceTest {
         //assert true
         assertThat(ml.suma(2, 2), is(4));
 
+        assertThat(ml.suma(3, 3), is(6));
     }
 }
