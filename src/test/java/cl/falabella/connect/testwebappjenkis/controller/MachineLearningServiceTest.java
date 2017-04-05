@@ -40,5 +40,8 @@ public class MachineLearningServiceTest {
         assertThat(ml.suma(2, 2), is(4));
 
         assertThat(ml.suma(3, 3), is(6));
+        
+        
+        assertThat(ml.suma(4, 4), is(8));
     }
 }
