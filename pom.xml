@@ -21,11 +21,11 @@
         <logback.version>1.1.7</logback.version>
         <jcl.slf4j.version>1.7.21</jcl.slf4j.version>
         <deploy.jboss.host>10.91.16.106</deploy.jboss.host>
-        <deploy.jboss.port>8180</deploy.jboss.port>
-        <deploy.jboss.user>connectd</deploy.jboss.user>
-        <deploy.jboss.password>connectd</deploy.jboss.password>
+        <deploy.jboss.port>10099</deploy.jboss.port>
+        <deploy.jboss.user>adessagds2017</deploy.jboss.user>
+        <deploy.jboss.password>gds12345</deploy.jboss.password>
         <backend.deployment-name>TestWebAppJenkis</backend.deployment-name>
-        <skipDeployment>false</skipDeployment>
+        <skipDeployment>true</skipDeployment>
     </properties>
 
     <dependencies>
@@ -119,13 +119,8 @@
     </dependencies>
 
     <build>
-        <plugins>
-             <plugin>
-                <groupId>org.jboss.as.plugins</groupId>
-                <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>7.1.1.Final</version>
-            </plugin>
-<!--        <plugin>
+        <plugins>             
+       <plugin>
             <groupId>org.jboss.as.plugins</groupId>
             <artifactId>jboss-as-maven-plugin</artifactId>
             <version>7.1.1.Final</version>
@@ -147,7 +142,7 @@
                     </goals>
                 </execution>
             </executions>
-        </plugin>-->
+        </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
