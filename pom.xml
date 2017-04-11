@@ -24,10 +24,15 @@
         <deploy.jboss.port>10099</deploy.jboss.port>
         <deploy.jboss.user>adessagds2017</deploy.jboss.user>
         <deploy.jboss.password>gds12345</deploy.jboss.password>
-        <backend.deployment-name>TestWebAppJenkis</backend.deployment-name>
-        <skipDeployment>true</skipDeployment>
+        <backend.deployment-name>${project.build.finalName}.war</backend.deployment-name>
+        <skipDeployment>false</skipDeployment>
     </properties>
-
+    <!--<distributionManagement>
+        <site>
+          <id>servidorDesarrollo</id>
+          <url>scp:http://10.91.16.106/sites/</url>
+        </site>
+    </distributionManagement>-->
     <dependencies>
                 <!-- For logging, using the SLF4J facade-->
         <dependency>
@@ -130,8 +135,9 @@
                 <username>${deploy.jboss.user}</username>
                 <password>${deploy.jboss.password}</password>
                 <name>${backend.deployment-name}</name>
-                <filename>${project.build.finalName}.war</filename>
+                <filename>${backend.deployment-name}</filename>
                 <skip>${skipDeployment}</skip>
+                <force>true</force>                
             </configuration>
             <executions>
                 <execution>
